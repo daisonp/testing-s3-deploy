@@ -6,12 +6,11 @@ node_js:
 
 env:
   global:
-    - S3_TEST_BUCKET_NAME="3-daison-test-templates-01"
-    - S3_DEV_BUCKET_NAME="3-daison-dev-templates-01"
+    - S3_TEST_BUCKET_NAME="s3-daison-test-templates-01"
+    - S3_DEV_BUCKET_NAME="s3-daison-dev-templates-01"
     - REGION="eu-west-2"
 
 before_install:
-  - npm install
   - echo 'Building templates version ' $TRAVIS_BUILD_NUMBER
   - pip install --user awscli
   - aws configure set aws_access_key_id $DEV_AWS_ACCESS_KEY_ID --profile dev
@@ -20,7 +19,6 @@ before_install:
   - aws configure set aws_secret_access_key $TEST_AWS_SECRET_ACCESS_KEY --profile test
 
 script:
-  - npm run test
   - echo $TRAVIS_BUILD_NUMBER > ./templates/version && cp ./templates/version ./config/version
 
 
