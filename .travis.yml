@@ -1,8 +1,5 @@
 sudo: required
 dist: trusty
-#language: node_js
-#node_js:
-#    - "8.9.0"
 
 env:
   global:
@@ -19,7 +16,7 @@ before_install:
   - aws configure set aws_secret_access_key $TEST_AWS_SECRET_ACCESS_KEY --profile test
 
 script:
-  - echo tag = $TRAVIS_TAG, build number = $TRAVIS_BUILD_NUMBER > ./templates/deployed-version.txt && cp ./templates/deployed-version.txt ./config/deployed-version.txt
+  - echo tag = $TRAVIS_TAG, build number = $TRAVIS_BUILD_NUMBER > ./templates/deployed-version.txt
 
 
 deploy:
