@@ -8,7 +8,7 @@ env:
   global:
     - S3_TEST_BUCKET_NAME="3-daison-test-templates-01"
     - S3_DEV_BUCKET_NAME="3-daison-dev-templates-01"
-    - REGION="eu-west-1"
+    - REGION="eu-west-2"
 
 before_install:
   - npm install
