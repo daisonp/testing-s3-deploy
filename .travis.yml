@@ -19,7 +19,7 @@ before_install:
   - aws configure set aws_secret_access_key $TEST_AWS_SECRET_ACCESS_KEY --profile test
 
 script:
-  - echo $TRAVIS_BUILD_NUMBER > ./templates/version.txt && cp ./templates/version ./config/version.txt
+  - echo $TRAVIS_BUILD_NUMBER > ./templates/version.txt && cp ./templates/version.txt ./config/version.txt
 
 
 deploy:
