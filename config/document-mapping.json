@@ -1,0 +1,10 @@
+{ "map" : [
+    { "brand" : "B1",
+      "code"  : "C1",
+      "filename" : "B1-C1-doc.pdf"
+    },
+    { "brand" : "B1",
+        "code"  : "C2",
+        "filename" : "B1-C2-doc.pdf"
+    }
+]}

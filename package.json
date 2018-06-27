@@ -1,0 +1,25 @@
+{
+  "name": "testing-s3-deploy",
+  "version": "1.0.0",
+  "description": "Testing deploying to an s3 bucket using travis and awscli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No Tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daisonp/testing-s3-deploy.git"
+  },
+  "keywords": [
+    "node",
+    "aws",
+    "s3",
+    "travis"
+  ],
+  "author": "Richard Parry",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/daisonp/testing-s3-deploy/issues"
+  },
+  "homepage": "https://github.com/daisonp/testing-s3-deploy#readme"
+}
