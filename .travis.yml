@@ -19,7 +19,7 @@ before_install:
   - aws configure set aws_secret_access_key $TEST_AWS_SECRET_ACCESS_KEY --profile test
 
 script:
-  - echo $TRAVIS_BUILD_NUMBER > ./templates/version && cp ./templates/version ./config/version
+  - echo $TRAVIS_BUILD_NUMBER > ./templates/version.txt && cp ./templates/version ./config/version.txt
 
 
 deploy:
@@ -29,7 +29,7 @@ deploy:
       - . ./scripts/deploy_dev.sh
     on:
       tags: true
-      condition: $TRAVIS_TAG != ^dev.*$
+      condition: $TRAVIS_TAG =~ ^dev.*$
     skip_cleanup: true
   # Deploy to test if build has been tagged test
   - provider: script
@@ -37,7 +37,7 @@ deploy:
       - . ./scripts/deploy_test.sh
     on:
       tags: true
-      condition: $TRAVIS_TAG != ^test.*$
+      condition: $TRAVIS_TAG =~ ^test.*$
     skip_cleanup: true
   
 
